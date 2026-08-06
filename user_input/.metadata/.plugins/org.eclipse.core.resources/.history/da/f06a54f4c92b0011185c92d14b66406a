@@ -1,0 +1,11 @@
+package com.JPA.jpaConnectivity.Repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface Student_Repository {
+
+	void show();
+	
+	
+}

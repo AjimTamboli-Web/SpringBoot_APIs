@@ -1,0 +1,12 @@
+package com.JPA.jpaConnectivity.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.JPA.jpaConnectivity.Repository.Teacher_Repo;
+
+@Service
+public class Teacher_service {
+
+	private Teacher_Repo repo;
+	
+}

@@ -1,0 +1,7 @@
+package com.JPA.jpaConnectivity.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Teacher_Repo extends JpaRepository<T, ID> {
+
+}

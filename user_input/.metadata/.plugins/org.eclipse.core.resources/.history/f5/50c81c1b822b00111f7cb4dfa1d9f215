@@ -1,0 +1,5 @@
+package com.JPA.jpaConnectivity.Repository;
+
+public interface Student_Repository {
+
+}

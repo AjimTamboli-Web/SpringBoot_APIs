@@ -1,0 +1,5 @@
+package com.JPA.jpaConnectivity.Entity;
+
+public class Teacher {
+
+}
