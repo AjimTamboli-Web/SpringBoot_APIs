@@ -16,7 +16,17 @@ import org.springframework.web.context.annotation.RequestScope;
 
 public class B_Request {
 
-	
+	/**
+	 * 
+	 * 2>> Request Scope(web only) => One bean per HTTP request. Destroyed after response.
+	 * 	                              it uses for store request-specific data
+	 *      Adv.- Thread-safe, No data sharing
+	 *      Dis.- Only works in web apps, Slight overhead
+	 *      
+	 * Ex. User send request -> new object
+	 *      Another request -> new object
+	 * 
+	 */
 	
 	UUID uuid = UUID.randomUUID();
 	
