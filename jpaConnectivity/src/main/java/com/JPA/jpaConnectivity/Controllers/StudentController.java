@@ -1,0 +1,53 @@
+package com.JPA.jpaConnectivity.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.JPA.jpaConnectivity.Entity.Student;
+import com.JPA.jpaConnectivity.Repository.Student_Repository;
+
+@RestController
+public class StudentController {
+
+	// field injection it gives you NPE
+	@Autowired
+	public Student_Repository repo;
+	
+//	// constructor injection it does not give you NPE
+//	public StudentController(Student_Repository repo) {
+//		this.repo = repo;
+//	}
+	
+	
+	@PostMapping("/add-student")
+	public String add(@RequestBody Student student) throws InterruptedException {
+		
+		System.out.println("Adding the student data to the database.");
+		Thread.sleep(3000);
+		repo.save(student);
+		
+		return student.getName() + " save successfully.";
+	}
+	
+	@GetMapping("/get-all")
+	public List<Student> get(){
+		
+		return repo.findAll();
+		
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String delete(@PathVariable(value="id") int id) {
+		
+		repo.deleteById(id);
+		return "deleted!";
+	}
+	
+}
