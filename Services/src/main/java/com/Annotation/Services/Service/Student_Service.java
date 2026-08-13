@@ -12,6 +12,19 @@ import com.Annotation.Services.Model.Students;
 @Service
 public class Student_Service {
 
+	/**
+	 * @Service tells Spring: This class contains business logic, please manage it as a bean inside the
+	 *                            IoC container.
+	 * @Service is actually a specialization of @Component.
+	 * 
+	 * It will : Create an object(bean), Store it in the IoC container,
+	 * 			 Allow dependency Injection( @Autowired )
+	 * We use because separation of layers ( Architecture clarity) that it can get only business logic.
+	 *   Internally same as @Componenet.
+	 * 
+	 * Advanced used - Spring may apply AOP(like transactions), Business-specific processing.
+	 * 
+	 */
 	
 	List<Students> list = new ArrayList<>();
 	

@@ -2,6 +2,8 @@ package com.Annotation.Services.Model;
 
 import java.util.List;
 
+//  This is just a POJO class  (Plane Old Java Object)
+
 public class Students {
 
 	private int id;
