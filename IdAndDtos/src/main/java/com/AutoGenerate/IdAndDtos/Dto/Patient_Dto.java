@@ -1,6 +1,6 @@
 package com.AutoGenerate.IdAndDtos.Dto;
 
-import com.AutoGenerate.IdAndDtos.Entity.Doctor;
+
 import com.AutoGenerate.IdAndDtos.Entity.Patient;
 
 public class Patient_Dto {
